@@ -1,0 +1,15 @@
+<h1>Profile</h1>
+<p>Name: <%= @profile["name"] %></p>
+<h1>Music</h1>
+<% for m in @music["data"] -%>
+<p><%= m["name"] %></p>
+<% end -%>
+<h1>Books</h1>
+<% for m in @books["data"] -%>
+<p><%= m["name"] %></p>
+<% end -%>
+<h1>Movies</h1>
+<% for m in @movies["data"] -%>
+<p><%= m["name"] %></p>
+<% end -%>
+

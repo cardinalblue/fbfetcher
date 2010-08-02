@@ -1,0 +1,5 @@
+== fbfetcher
+
+A rails application for fetching Facebook user profile.
+Using rest-graph for Facebook graph api.
+

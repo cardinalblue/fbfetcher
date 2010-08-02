@@ -1,0 +1,6 @@
+production:
+  app_id:
+  secret:
+  auto_decode: true
+  lang: zh-tw
+
