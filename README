@@ -3,3 +3,7 @@
 A rails application for fetching Facebook user profile.
 Using rest-graph for Facebook graph api.
 
+== howto
+ * Put app_id and secret in config/rest-graph.yml (there is an example)
+ * Done! (ready to push to heroku)
+
