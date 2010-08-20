@@ -9,9 +9,14 @@ class WelcomeController < ApplicationController
     @movies = rest_graph.get('me/movies')
   end
 
+  def places
+    got = rest_graph.get('search', :type => 'checkin')
+    @data = got['data']
+  end
+
 private
   def filter_rest_graph_setup
-    rest_graph_setup(:auto_authorize_scope => "user_interests,publish_stream,email", :auto_authorize => true)
+    rest_graph_setup(:auto_authorize_scope => "user_interests,publish_stream,email,user_checkins,friends_checkins", :auto_authorize => true)
   end
 end
 

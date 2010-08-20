@@ -1,5 +1,7 @@
 == fbfetcher
 
+Added: demo of Facebook places at Welcome#places.
+
 A rails application for fetching Facebook user profile.
 Using rest-graph for Facebook graph api.
 

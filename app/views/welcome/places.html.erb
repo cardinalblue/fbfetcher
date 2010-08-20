@@ -1,0 +1,23 @@
+<table cellpadding="20">
+  <tr>
+    <th>Name</th>
+    <th>Time</th>
+    <th>Place</th>
+    <th>Location</th>
+    <th>Map</th>
+  <tr>
+  <% for checkin in @data %>
+  <tr>
+    <td><img src="<%= rest_graph.url(checkin['from']['id']+'/picture', :type => 'large') %>"/><br />
+        <%=h checkin['from']['name'] %></td>
+    <td><%=h time_ago_in_words(DateTime.parse(checkin['created_time'])) %> ago</td>
+    <td><%=h checkin['place']['name'] %></td>
+    <td><% if checkin['place']['location']['city'] %>
+        <%=h checkin['place']['location']['city'] %> ,
+        <%=h checkin['place']['location']['state'] %>
+        <% end %></td>
+    <td><img src="http://maps.google.com/maps/api/staticmap?markers=color:red|<%=h checkin['place']['location']['latitude'] %>,<%=h checkin['place']['location']['longitude'] %>&size=400x200&sensor=false&zoom=15" /></td>
+  </tr>
+  <% end %>
+</table>
+
